@@ -48,17 +48,21 @@
                         Console.WriteLine(person);
                     break;
                 case 3:
-                    
+                    foreach (Person person in persons)
+                        Console.WriteLine(person);
+                    Console.WriteLine("Which Person Would You Like To Remove?(Enter Number) ");
+                    int remove = Convert.ToInt32(Console.ReadLine);
+                    persons.RemoveAt(remove - 1);
                     break;
                 case 4:
-
+                    // work in progress
                     break;
                 case 5:
                     Person rando = persons[random.Next(persons.Count)];
                     Console.WriteLine(rando.SSN);
                     break;
                 case 6:
-                    
+                    // work in progress
                     break;
                 case 0:
                     Console.WriteLine("Goodbye!");
